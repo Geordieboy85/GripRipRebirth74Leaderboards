@@ -120,9 +120,9 @@
         const validHoles = divisionPlayers.map(p => getNum(p.hole)).filter(v => v !== null);
         if (getNum(player.hole) === Math.max(...validHoles) && Math.max(...validHoles) > 0) bonusPts += 25;
 
-        // HIO / Alba Bonuses
-        bonusPts += (getNum(player.hio) || 0) * 50;
-        bonusPts += (getNum(player.alba) || 0) * 50;
+        // ACE / ALBY Bonuses
+        bonusPts += (getNum(player.ACE) || 0) * 50;
+        bonusPts += (getNum(player.ALBY) || 0) * 50;
 
         return (basePts + bonusPts) * multiplier;
     }
@@ -153,7 +153,7 @@
 
             let html = `<div class="div-header div-${divNum}">Division ${divNum} Live Board</div>
                         <div class="table-responsive"><table>
-                <thead><tr><th>POS</th><th style="text-align:left; padding-left:25px;">PLAYER</th><th>TO PAR</th><th>PUTT</th><th>SHOT</th><th>HIO</th><th>ALBA</th><th class="pts-col">LIVE PTS</th></tr></thead><tbody>`;
+                <thead><tr><th>POS</th><th style="text-align:left; padding-left:25px;">PLAYER</th><th>TO PAR</th><th>PUTT</th><th>SHOT</th><th>ACE</th><th>ALBY</th><th class="pts-col">LIVE PTS</th></tr></thead><tbody>`;
             
             sorted.forEach((p, i) => {
                 const score = getNum(p.toPar);
@@ -168,8 +168,8 @@
                     <td><div class="name-cell"><span class="plat-icon">${getIcon(p.platform)}</span>${p.name}</div></td>
                     <td style="color:${score < 0 ? 'var(--red)' : (score === 0 ? 'var(--green)' : 'black')}">${p.toPar || '-'}</td>
                     <td>${p.putt || '-'}</td><td>${p.hole || '-'}</td>
-                    <td>${p.hio > 0 ? `<span class="milestone-badge">⛳ ${p.hio}</span>` : '-'}</td>
-                    <td>${p.alba > 0 ? `<span class="milestone-badge">🦅 ${p.alba}</span>` : '-'}</td>
+                    <td>${p.ACE > 0 ? `<span class="milestone-badge">⛳ ${p.ACE}</span>` : '-'}</td>
+                    <td>${p.ALBY > 0 ? `<span class="milestone-badge">🦅 ${p.ALBY}</span>` : '-'}</td>
                     <td class="pts-col">${score !== null ? lp : 0}</td>
                 </tr>`;
             });
