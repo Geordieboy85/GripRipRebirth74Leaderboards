@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grip & Rip Rebirth - Live Leaderboard</title>
+    <title>Grip & Rip Rebirth 74 - Live Leaderboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root { 
@@ -13,52 +13,71 @@
             --red: #dc3545; --green: #28a745;
             --glow: 0px 5px 15px rgba(255, 215, 0, 0.4);
         }
-        body { background-color: #f0f2f5; margin: 0; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
+        body { background-color: #000; margin: 0; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
         
-        .leaderboard-container { max-width: 1400px; margin: 0 auto 40px auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
-        
-        .header { background: var(--header-grad); padding: 0; text-align: center; border-bottom: 4px solid var(--gold); line-height: 0; box-shadow: var(--glow); }
-        .logo-img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 300px; }
+        .leaderboard-container { width: 100%; margin: 0; background: white; position: relative; }
+        .header { background: var(--header-grad); text-align: center; border-bottom: 4px solid var(--gold); box-shadow: var(--glow); display: flex; justify-content: center; align-items: center; padding: 0; }
+        .logo-img { width: 100%; height: auto; max-height: 45vh; display: block; object-fit: cover; }
 
-        .info-bar { background: var(--info-grad); color: #fff; padding: 20px; display: flex; justify-content: center; align-items: center; gap: 20px; border-bottom: 3px solid var(--gold); flex-wrap: wrap; }
-        .info-item { display: flex; align-items: center; font-size: 18px; font-weight: 800; white-space: nowrap; }
-        .label { color: var(--gold); text-transform: uppercase; margin-right: 8px; font-size: 14px; letter-spacing: 1px; }
+        .logo-break { background: #000; padding: 10px 0; text-align: center; border-top: 4px solid var(--gold); border-bottom: 4px solid var(--gold); margin: 0; line-height: 0; }
+        .break-img { width: 90%; max-width: 500px; height: auto; display: inline-block; }
 
-        .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-        
-        .div-header { color: white; padding: 15px 25px; font-size: 22px; font-weight: bold; text-transform: uppercase; }
+        .info-bar { background: var(--info-grad); color: #fff; padding: 20px; display: flex; justify-content: center; align-items: center; gap: 40px; border-bottom: 3px solid var(--gold); flex-wrap: wrap; }
+        .info-item { display: flex; align-items: center; font-size: 18px; font-weight: 800; }
+        .label { color: var(--gold); text-transform: uppercase; margin-right: 12px; font-size: 14px; letter-spacing: 1px; }
+
+        .div-section, .season-section { position: relative; width: 100%; background: white; }
+        .div-section::before, .season-section::before {
+            content: "";
+            position: absolute;
+            top: 50%; left: 5%;
+            width: 400px; height: 90%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: contain;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        .div-section::before { background-image: url('pgalogo.png'); }
+        .season-section::before { background-image: url('wannamaker.png'); }
+
+        .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; position: relative; z-index: 1; }
+        .div-header { color: white; padding: 15px 30px; font-size: 24px; font-weight: bold; text-transform: uppercase; position: relative; z-index: 2; }
         .div-1 { background: var(--div1); } .div-2 { background: var(--div2); } .div-3 { background: var(--div3); } 
         
-        table { width: 100%; border-collapse: collapse; min-width: 900px; }
-        thead th { background: #f4f4f4; font-size: 11px; padding: 12px; border-bottom: 2px solid #ddd; color: #444; text-transform: uppercase; }
-        td { padding: 12px; text-align: center; border-bottom: 1px solid #eee; font-size: 16px; font-weight: 600; }
+        table { width: 100%; border-collapse: collapse; background: transparent; }
+        thead th { background: rgba(244, 244, 244, 0.98); font-size: 13px; padding: 15px; border-bottom: 2px solid #ddd; color: #444; text-transform: uppercase; }
+        td { padding: 15px; text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); font-size: 17px; font-weight: 600; }
         
-        .awards-footer { background: #fcfcfc; border-top: 2px solid #ddd; padding: 15px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px; }
-        .award-item { font-size: 15px; font-weight: 800; text-transform: uppercase; color: #444; }
-        .award-val { color: var(--div1); margin-left: 5px; }
+        .rank-cell { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 900; }
+        .move-up { color: var(--green); font-size: 14px; }
+        .move-down { color: var(--red); font-size: 14px; }
+        .move-even { color: #999; font-size: 14px; }
 
-        .name-cell { display: flex; align-items: center; text-align: left; padding-left: 10px; min-width: 180px; }
-        .plat-icon { margin-right: 12px; width: 20px; font-size: 18px; }
-        .pts-col { font-weight: 900; color: #333; font-size: 18px; background: #fffde7; }
-        .accum-col { background: #f9f9f9; font-weight: 800; color: #555; }
+        .awards-footer { background: rgba(252, 252, 252, 0.98); border-top: 2px solid #ddd; padding: 15px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; position: relative; z-index: 2; border-bottom: 10px solid #eee; }
+        .award-item { font-size: 16px; font-weight: 800; text-transform: uppercase; color: #444; }
+        .award-val { color: var(--div1); margin-left: 8px; text-transform: none; }
+
+        .name-cell { display: flex; align-items: center; text-align: left; padding-left: 30px; min-width: 250px; gap: 15px; }
+        .plat-icon { width: 25px; font-size: 22px; text-align: center; }
         
-        .score-under { color: var(--red); } 
-        .score-even { color: var(--green); }
-        .proj-win { color: var(--green); font-weight: 900; }
-        .milestone-badge { background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 14px; color: #333; font-weight: 800; }
-
-        .season-header { background: #333; color: white; padding: 20px; font-size: 24px; font-weight: 900; text-align: center; text-transform: uppercase; border-bottom: 3px solid var(--gold); }
+        .pts-col { font-weight: 900; color: #333; font-size: 20px; background: rgba(255, 253, 231, 0.7); }
+        .accum-col { background: rgba(249, 249, 249, 0.7); font-weight: 800; color: #555; }
+        
+        .season-header { background: #222; color: var(--gold); padding: 25px; font-size: 28px; font-weight: 900; text-align: center; text-transform: uppercase; border-bottom: 5px solid var(--gold); }
     </style>
 </head>
 <body>
 
     <div class="leaderboard-container">
-        <div class="header">
-            <img src="logo.png" alt="Grip & Rip Rebirth" class="logo-img">
-        </div>
-        
-        <div id="info-bar" class="info-bar">Loading event details...</div>
+        <div class="header"><img src="logo.png" alt="Grip & Rip Rebirth" class="logo-img"></div>
+        <div id="info-bar" class="info-bar">Loading...</div>
         <div id="live-tables"></div>
+        
+        <div class="logo-break">
+            <img src="2k25 logo.png" alt="PGA 2K25" class="break-img">
+        </div>
     </div>
 
     <div class="leaderboard-container">
@@ -72,58 +91,35 @@
     async function loadLeaderboard() {
         try {
             const response = await fetch('GR_Backup.json?t=' + Date.now());
-            if (!response.ok) throw new Error("Data file (GR_Backup.json) not found.");
+            if (!response.ok) throw new Error("Data file not found.");
             const state = await response.json();
             renderInfo(state);
             renderLive(state);
             renderSeason(state);
         } catch (err) {
-            document.getElementById('live-tables').innerHTML = `<div style="padding:50px; text-align:center; color:red; font-weight:bold;">${err.message}</div>`;
+            document.getElementById('live-tables').innerHTML = `<div style="padding:50px; text-align:center; color:red;">${err.message}</div>`;
         }
     }
 
     function getNum(val) {
         if (val === undefined || val === null || val === '' || val === '-' || val === '.') return null;
-        const n = (val.toString().toUpperCase() === 'E') ? 0 : Number(val);
-        return isNaN(n) ? null : n;
-    }
-
-    function formatScore(n) {
-        if (n === null) return '-';
-        if (n === 0) return 'E';
-        return n > 0 ? '+' + n : n;
+        if (typeof val === 'string' && val.toUpperCase() === 'E') return 0;
+        const n = Number(val); return isNaN(n) ? null : n;
     }
 
     function calculateLivePoints(player, divisionPlayers, isSignature) {
         const score = getNum(player.toPar);
         if (score === null) return 0;
-        
         const multiplier = isSignature ? 2 : 1;
-        
-        // 1. Sort all players who have a score
-        const scoredPlayers = divisionPlayers
-            .filter(p => getNum(p.toPar) !== null)
-            .sort((a, b) => getNum(a.toPar) - getNum(b.toPar));
-
-        // 2. TRUE TIE LOGIC: Find the first person with this score to determine rank
-        const firstPersonWithScore = scoredPlayers.find(p => getNum(p.toPar) === score);
-        const tieRankIdx = scoredPlayers.indexOf(firstPersonWithScore);
-
-        // 3. Base Points
+        const scoredPlayers = divisionPlayers.filter(p => getNum(p.toPar) !== null).sort((a, b) => getNum(a.toPar) - getNum(b.toPar));
+        const firstWithScore = scoredPlayers.find(p => getNum(p.toPar) === score);
+        const tieRankIdx = scoredPlayers.indexOf(firstWithScore);
         let basePts = (tieRankIdx !== -1 && tieRankIdx < ptsMap.length) ? ptsMap[tieRankIdx] : 5;
-        
-        let bonusPts = 0;
-        // Longest Putt/Shot Bonuses
+        let bonusPts = (getNum(player.hio) || 0) * 50 + (getNum(player.alba) || 0) * 50;
         const validPutts = divisionPlayers.map(p => getNum(p.putt)).filter(v => v !== null);
         if (getNum(player.putt) === Math.max(...validPutts) && Math.max(...validPutts) > 0) bonusPts += 25;
-        
         const validHoles = divisionPlayers.map(p => getNum(p.hole)).filter(v => v !== null);
         if (getNum(player.hole) === Math.max(...validHoles) && Math.max(...validHoles) > 0) bonusPts += 25;
-
-        // ACE / ALBY Bonuses
-        bonusPts += (getNum(player.ACE) || 0) * 50;
-        bonusPts += (getNum(player.ALBY) || 0) * 50;
-
         return (basePts + bonusPts) * multiplier;
     }
 
@@ -136,7 +132,11 @@
         `;
     }
 
-    const getIcon = (p) => p === 'xbox' ? '<i class="fa-brands fa-xbox" style="color:#107C10"></i>' : p === 'playstation' ? '<i class="fa-brands fa-playstation" style="color:#003087"></i>' : '<i class="fa-brands fa-steam" style="color:#171a21"></i>';
+    const getIcon = (p) => {
+        if (p === 'xbox') return '<i class="fa-brands fa-xbox plat-icon" style="color:#107C10"></i>';
+        if (p === 'playstation') return '<i class="fa-brands fa-playstation plat-icon" style="color:#003087"></i>';
+        return '<i class="fa-brands fa-steam plat-icon" style="color:#171a21"></i>';
+    };
 
     function renderLive(state) {
         const container = document.getElementById('live-tables');
@@ -151,32 +151,21 @@
             const validHoles = divPlayers.map(p => ({name: p.name, val: getNum(p.hole)})).filter(v => v.val > 0);
             const bestHole = validHoles.length ? validHoles.reduce((prev, curr) => (prev.val > curr.val) ? prev : curr) : null;
 
-            let html = `<div class="div-header div-${divNum}">Division ${divNum} Live Board</div>
+            let html = `<div class="div-section">
+                        <div class="div-header div-${divNum}">Division ${divNum} Live Board</div>
                         <div class="table-responsive"><table>
-                <thead><tr><th>POS</th><th style="text-align:left; padding-left:25px;">PLAYER</th><th>TO PAR</th><th>PUTT</th><th>SHOT</th><th>ACE</th><th>ALBY</th><th class="pts-col">LIVE PTS</th></tr></thead><tbody>`;
+                <thead><tr><th>POS</th><th style="text-align:left; padding-left:30px;">PLAYER</th><th>TO PAR</th><th>PUTT</th><th>SHOT</th><th>ACE</th><th>ALBY</th><th class="pts-col">LIVE PTS</th></tr></thead><tbody>`;
             
-            sorted.forEach((p, i) => {
+            sorted.forEach((p) => {
                 const score = getNum(p.toPar);
-                const lp = calculateLivePoints(p, divPlayers, state.isSignature);
-                
-                // Display Rank Tie Logic
                 const firstWithScore = sorted.find(person => getNum(person.toPar) === score);
                 const displayRank = sorted.indexOf(firstWithScore) + 1;
-
-                html += `<tr>
-                    <td>${score !== null ? displayRank : '-'}</td>
-                    <td><div class="name-cell"><span class="plat-icon">${getIcon(p.platform)}</span>${p.name}</div></td>
-                    <td style="color:${score < 0 ? 'var(--red)' : (score === 0 ? 'var(--green)' : 'black')}">${p.toPar || '-'}</td>
-                    <td>${p.putt || '-'}</td><td>${p.hole || '-'}</td>
-                    <td>${p.ACE > 0 ? `<span class="milestone-badge">⛳ ${p.ACE}</span>` : '-'}</td>
-                    <td>${p.ALBY > 0 ? `<span class="milestone-badge">🦅 ${p.ALBY}</span>` : '-'}</td>
-                    <td class="pts-col">${score !== null ? lp : 0}</td>
-                </tr>`;
+                html += `<tr><td>${score !== null ? displayRank : '-'}</td><td><div class="name-cell">${getIcon(p.platform)}<span>${p.name}</span></div></td><td style="color:${score < 0 ? 'var(--red)' : (score === 0 ? 'var(--green)' : 'black')}">${p.toPar || '-'}</td><td>${p.putt || '-'}</td><td>${p.hole || '-'}</td><td>${p.hio > 0 ? '⛳'+p.hio : '-'}</td><td>${p.alba > 0 ? '🦅'+p.alba : '-'}</td><td class="pts-col">${score !== null ? calculateLivePoints(p, divPlayers, state.isSignature) : 0}</td></tr>`;
             });
             html += `</tbody></table></div><div class="awards-footer">
                 <div class="award-item">🚩 Longest Putt: <span class="award-val">${bestPutt ? bestPutt.name + ' (' + bestPutt.val + 'ft)' : '---'}</span></div>
                 <div class="award-item">🎯 Longest Hole-out: <span class="award-val">${bestHole ? bestHole.name + ' (' + bestHole.val + 'yds)' : '---'}</span></div>
-            </div>`;
+            </div></div>`;
             container.innerHTML += html;
         });
     }
@@ -188,40 +177,37 @@
             let divPlayers = state.players.filter(p => String(p.division) === String(divNum));
             const scored = divPlayers.filter(p => getNum(p.toPar) !== null);
             const leaderScore = scored.length ? Math.min(...scored.map(p => getNum(p.toPar))) : null;
-
+            
             let sorted = divPlayers.map(p => {
                 const livePts = calculateLivePoints(p, divPlayers, state.isSignature);
                 const scoreEntered = getNum(p.toPar) !== null;
-                const isLeading = scoreEntered && getNum(p.toPar) === leaderScore;
                 const histTotal = (p.history || []).reduce((sum, s) => sum + (Number(s) || 0), 0);
-                
-                return { 
-                    ...p, 
-                    projPts: (Number(p.seasonPts) || 0) + livePts,
-                    projWins: (Number(p.wins) || 0) + (isLeading ? 1 : 0),
-                    projEvents: (Number(p.events) || 0) + (scoreEntered ? 1 : 0),
-                    accum: histTotal + (getNum(p.toPar) || 0),
-                    isLeading: isLeading
-                };
+                return { ...p, projPts: (Number(p.seasonPts) || 0) + livePts, projWins: (Number(p.wins) || 0) + (scoreEntered && getNum(p.toPar) === leaderScore ? 1 : 0), projEvents: (Number(p.events) || 0) + (scoreEntered ? 1 : 0), accum: histTotal + (getNum(p.toPar) || 0) };
             }).sort((a,b) => b.projPts - a.projPts || a.accum - b.accum);
-
+            
             if (sorted.length === 0) return;
 
-            let html = `<div class="div-header div-${divNum}">Division ${divNum} Standings</div>
-                        <div class="table-responsive"><table>
-                <thead><tr><th>RK</th><th style="text-align:left; padding-left:25px;">PLAYER</th><th>ACCUM</th><th>WINS</th><th>EVENTS</th><th class="pts-col">TOTAL PTS</th></tr></thead><tbody>`;
+            let html = `<div class="season-section">
+                        <div class="div-header div-${divNum}">Division ${divNum} Standings</div>
+                        <div class="table-responsive"><table><thead><tr><th>RK</th><th style="text-align:left; padding-left:30px;">PLAYER</th><th>ACCUM</th><th>WINS</th><th>EVENTS</th><th class="pts-col">TOTAL PTS</th></tr></thead><tbody>`;
             
             sorted.forEach((p, i) => {
+                const curRank = i + 1;
+                const oldRank = Number(p.rank) || curRank;
+                let marker = '<i class="fa-solid fa-minus move-even"></i>';
+                if (curRank < oldRank) marker = '<i class="fa-solid fa-caret-up move-up"></i>';
+                if (curRank > oldRank) marker = '<i class="fa-solid fa-caret-down move-down"></i>';
+
                 html += `<tr>
-                    <td>${i+1}</td>
-                    <td><div class="name-cell"><span class="plat-icon">${getIcon(p.platform)}</span>${p.name}</div></td>
-                    <td class="accum-col" style="color:${p.accum < 0 ? 'var(--red)' : (p.accum === 0 ? 'var(--green)' : '#555')}">${formatScore(p.accum)}</td>
-                    <td class="${p.isLeading ? 'proj-win' : ''}">${p.projWins}${p.isLeading ? ' ⭐' : ''}</td>
+                    <td><div class="rank-cell"><span>${curRank}</span> ${marker}</div></td>
+                    <td><div class="name-cell">${getIcon(p.platform)}<span>${p.name}</span></div></td>
+                    <td class="accum-col" style="color:${p.accum < 0 ? 'var(--red)' : (p.accum === 0 ? 'var(--green)' : '#555')}">${p.accum > 0 ? '+' + p.accum : (p.accum === 0 ? 'E' : p.accum)}</td>
+                    <td>${p.projWins}</td>
                     <td>${p.projEvents}</td>
                     <td class="pts-col">${p.projPts}</td>
                 </tr>`;
             });
-            container.innerHTML += html + `</tbody></table></div>`;
+            container.innerHTML += html + `</tbody></table></div></div>`;
         });
     }
     loadLeaderboard();
