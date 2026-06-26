@@ -1,0 +1,173 @@
+{
+  "venue": "NGLA",
+  "date": "2026-06-18 to 2026-06-24",
+  "seasonNum": 7,
+  "weekNum": 1,
+  "isSig": false,
+  "doubleBonus": false,
+  "players": [
+    {
+      "name": "Colly45x",
+      "console": "Xbox",
+      "division": 1,
+      "toPar": "",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Keep_of_Kalessin",
+      "console": "PS",
+      "division": 1,
+      "toPar": "-4",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Mr Longpole",
+      "console": "Xbox",
+      "division": 1,
+      "toPar": "-5",
+      "putt": "",
+      "shot": "13.7",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Geordieboy85",
+      "console": "PS",
+      "division": 1,
+      "toPar": "-4",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Hoplinkz",
+      "console": "PS",
+      "division": 2,
+      "toPar": "",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Polekatt",
+      "console": "PC",
+      "division": 3,
+      "toPar": "+27",
+      "putt": "",
+      "shot": "11.2",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Horusphoenix",
+      "console": "Xbox",
+      "division": 1,
+      "toPar": "-11",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Hammers1man",
+      "console": "PC",
+      "division": 2,
+      "toPar": "",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "X3offtheTee",
+      "console": "Xbox",
+      "division": 1,
+      "toPar": "-2",
+      "putt": "31.5",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "NoWorries",
+      "console": "Xbox",
+      "division": 2,
+      "toPar": "+9",
+      "putt": "20",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Rendallio",
+      "console": "PS",
+      "division": 2,
+      "toPar": "-11",
+      "putt": "",
+      "shot": "15.4",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "BIGavoLEO",
+      "console": "Xbox",
+      "division": 2,
+      "toPar": "+12",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Jack-Mac21",
+      "console": "PS",
+      "division": 2,
+      "toPar": "",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "ArfaBubble",
+      "console": "PS",
+      "division": 3,
+      "toPar": "+7",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Bullfrog_Leg",
+      "console": "PS",
+      "division": 3,
+      "toPar": "-3",
+      "putt": "23",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "GbWaCkErGuY",
+      "console": "Xbox",
+      "division": 3,
+      "toPar": "-12",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    }
+  ],
+  "season": {},
+  "historyHtml": "",
+  "lastFinalizedWeek": 0
+}
