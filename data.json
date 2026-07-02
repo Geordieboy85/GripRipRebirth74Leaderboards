@@ -1,8 +1,8 @@
 {
-  "venue": "NGLA",
-  "date": "2026-06-18 to 2026-06-24",
+  "venue": "Wallara Heath",
+  "date": "2026-06-25 to 2026-07-01",
   "seasonNum": 7,
-  "weekNum": 1,
+  "weekNum": 2,
   "isSig": false,
   "doubleBonus": false,
   "players": [
@@ -20,7 +20,7 @@
       "name": "Keep_of_Kalessin",
       "console": "PS",
       "division": 1,
-      "toPar": "-4",
+      "toPar": "",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -30,9 +30,9 @@
       "name": "Mr Longpole",
       "console": "Xbox",
       "division": 1,
-      "toPar": "-5",
+      "toPar": "-7",
       "putt": "",
-      "shot": "13.7",
+      "shot": "",
       "ace": "",
       "alby": ""
     },
@@ -40,7 +40,7 @@
       "name": "Geordieboy85",
       "console": "PS",
       "division": 1,
-      "toPar": "-4",
+      "toPar": "-8",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -50,7 +50,7 @@
       "name": "Hoplinkz",
       "console": "PS",
       "division": 2,
-      "toPar": "",
+      "toPar": "-10",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -60,9 +60,9 @@
       "name": "Polekatt",
       "console": "PC",
       "division": 3,
-      "toPar": "+27",
-      "putt": "",
-      "shot": "11.2",
+      "toPar": "+8",
+      "putt": "49.4",
+      "shot": "",
       "ace": "",
       "alby": ""
     },
@@ -70,7 +70,7 @@
       "name": "Horusphoenix",
       "console": "Xbox",
       "division": 1,
-      "toPar": "-11",
+      "toPar": "-13",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -80,7 +80,7 @@
       "name": "Hammers1man",
       "console": "PC",
       "division": 2,
-      "toPar": "",
+      "toPar": "-9",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -91,7 +91,7 @@
       "console": "Xbox",
       "division": 1,
       "toPar": "-2",
-      "putt": "31.5",
+      "putt": "29.5",
       "shot": "",
       "ace": "",
       "alby": ""
@@ -100,8 +100,8 @@
       "name": "NoWorries",
       "console": "Xbox",
       "division": 2,
-      "toPar": "+9",
-      "putt": "20",
+      "toPar": "+6",
+      "putt": "37.4",
       "shot": "",
       "ace": "",
       "alby": ""
@@ -110,9 +110,9 @@
       "name": "Rendallio",
       "console": "PS",
       "division": 2,
-      "toPar": "-11",
+      "toPar": "-6",
       "putt": "",
-      "shot": "15.4",
+      "shot": "",
       "ace": "",
       "alby": ""
     },
@@ -120,7 +120,7 @@
       "name": "BIGavoLEO",
       "console": "Xbox",
       "division": 2,
-      "toPar": "+12",
+      "toPar": "+5",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -130,9 +130,9 @@
       "name": "Jack-Mac21",
       "console": "PS",
       "division": 2,
-      "toPar": "",
+      "toPar": "-6",
       "putt": "",
-      "shot": "",
+      "shot": "24.8",
       "ace": "",
       "alby": ""
     },
@@ -140,7 +140,7 @@
       "name": "ArfaBubble",
       "console": "PS",
       "division": 3,
-      "toPar": "+7",
+      "toPar": "+6",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -150,8 +150,8 @@
       "name": "Bullfrog_Leg",
       "console": "PS",
       "division": 3,
-      "toPar": "-3",
-      "putt": "23",
+      "toPar": "-13",
+      "putt": "",
       "shot": "",
       "ace": "",
       "alby": ""
@@ -160,14 +160,105 @@
       "name": "GbWaCkErGuY",
       "console": "Xbox",
       "division": 3,
-      "toPar": "-12",
+      "toPar": "-8",
       "putt": "",
-      "shot": "",
+      "shot": "114.6",
       "ace": "",
       "alby": ""
     }
   ],
-  "season": {},
-  "historyHtml": "",
-  "lastFinalizedWeek": 0
+  "season": {
+    "Horusphoenix": {
+      "points": 200,
+      "eventsPlayed": 2,
+      "wins": 2,
+      "acc": -24
+    },
+    "Mr Longpole": {
+      "points": 195,
+      "eventsPlayed": 2,
+      "wins": 0,
+      "acc": -12
+    },
+    "Keep_of_Kalessin": {
+      "points": 80,
+      "eventsPlayed": 1,
+      "wins": 0,
+      "acc": -4
+    },
+    "Geordieboy85": {
+      "points": 170,
+      "eventsPlayed": 2,
+      "wins": 0,
+      "acc": -12
+    },
+    "X3offtheTee": {
+      "points": 180,
+      "eventsPlayed": 2,
+      "wins": 0,
+      "acc": -4
+    },
+    "Rendallio": {
+      "points": 205,
+      "eventsPlayed": 2,
+      "wins": 1,
+      "acc": -17
+    },
+    "NoWorries": {
+      "points": 190,
+      "eventsPlayed": 2,
+      "wins": 0,
+      "acc": "+15"
+    },
+    "BIGavoLEO": {
+      "points": 140,
+      "eventsPlayed": 2,
+      "wins": 0,
+      "acc": "+17"
+    },
+    "GbWaCkErGuY": {
+      "points": 215,
+      "eventsPlayed": 2,
+      "wins": 1,
+      "acc": -20
+    },
+    "Bullfrog_Leg": {
+      "points": 215,
+      "eventsPlayed": 2,
+      "wins": 1,
+      "acc": -16
+    },
+    "ArfaBubble": {
+      "points": 160,
+      "eventsPlayed": 2,
+      "wins": 0,
+      "acc": "+13"
+    },
+    "Polekatt": {
+      "points": 190,
+      "eventsPlayed": 2,
+      "wins": 0,
+      "acc": "+35"
+    },
+    "Hoplinkz": {
+      "points": 100,
+      "eventsPlayed": 1,
+      "wins": 1,
+      "acc": -10
+    },
+    "Hammers1man": {
+      "points": 90,
+      "eventsPlayed": 1,
+      "wins": 0,
+      "acc": -9
+    },
+    "Jack-Mac21": {
+      "points": 105,
+      "eventsPlayed": 1,
+      "wins": 0,
+      "acc": -6
+    }
+  },
+  "historyHtml": "<div class=\"history-item\"><strong>S7 W2: Wallara Heath (25 Jun - 1 Jul 2026)</strong><table><tr><th colspan=\"3\">Division 1</th></tr><tr><td>Horusphoenix</td><td>-13</td><td>100</td></tr><tr><td>Geordieboy85</td><td>-8</td><td>90</td></tr><tr><td>Mr Longpole</td><td>-7</td><td>80</td></tr><tr><td>X3offtheTee</td><td>-2</td><td>95</td></tr><tr><th colspan=\"3\">Division 2</th></tr><tr><td>Hoplinkz</td><td>-10</td><td>100</td></tr><tr><td>Hammers1man</td><td>-9</td><td>90</td></tr><tr><td>Rendallio</td><td>-6</td><td>80</td></tr><tr><td>Jack-Mac21</td><td>-6</td><td>105</td></tr><tr><td>BIGavoLEO</td><td>+5</td><td>60</td></tr><tr><td>NoWorries</td><td>+6</td><td>75</td></tr><tr><th colspan=\"3\">Division 3</th></tr><tr><td>Bullfrog_Leg</td><td>-13</td><td>100</td></tr><tr><td>GbWaCkErGuY</td><td>-8</td><td>115</td></tr><tr><td>ArfaBubble</td><td>+6</td><td>80</td></tr><tr><td>Polekatt</td><td>+8</td><td>95</td></tr></table></div><div class=\"history-item\"><strong>S7 W1: NGLA (18 Jun - 24 Jun 2026)</strong><table><tr><th colspan=\"3\">Division 1</th></tr><tr><td>Horusphoenix</td><td>-11</td><td>100</td></tr><tr><td>Mr Longpole</td><td>-5</td><td>115</td></tr><tr><td>Keep_of_Kalessin</td><td>-4</td><td>80</td></tr><tr><td>Geordieboy85</td><td>-4</td><td>80</td></tr><tr><td>X3offtheTee</td><td>-2</td><td>85</td></tr><tr><th colspan=\"3\">Division 2</th></tr><tr><td>Rendallio</td><td>-11</td><td>125</td></tr><tr><td>NoWorries</td><td>+9</td><td>115</td></tr><tr><td>BIGavoLEO</td><td>+12</td><td>80</td></tr><tr><th colspan=\"3\">Division 3</th></tr><tr><td>GbWaCkErGuY</td><td>-12</td><td>100</td></tr><tr><td>Bullfrog_Leg</td><td>-3</td><td>115</td></tr><tr><td>ArfaBubble</td><td>+7</td><td>80</td></tr><tr><td>Polekatt</td><td>+27</td><td>95</td></tr></table></div>",
+  "lastFinalizedWeek": 2
 }
