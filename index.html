@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Grip&Rip Rebirth74</title>
+    <title>Grip&Rip Superman</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root { 
@@ -89,7 +89,6 @@
             text-align: center; font-size: 13px; font-weight: 500;
         }
 
-        /* Column Widths */
         .col-pos { width: 40px; font-weight: 800; background: rgba(0,0,0,0.1); }
         .col-player { width: 130px; text-align: left !important; padding-left: 10px !important; }
         .col-data { width: 45px; }
@@ -177,9 +176,20 @@
             document.getElementById('v-sw').innerText = `Season ${d.seasonNum} Week ${d.weekNum}`;
             document.getElementById('v-date').innerText = d.date;
 
-            // Leaderboards
-            [1,2,3].forEach(dv => {
+            const maxDivs = parseInt(d.maxDivisions) || 3;
+            let activeDivs = [];
+            for (let i = 1; i <= maxDivs; i++) {
+                activeDivs.push(i);
+            }
+
+            document.getElementById('div-tables').innerHTML = '';
+            document.getElementById('standings-area').innerHTML = '';
+
+            activeDivs.forEach(dv => {
                 const players = d.players.filter(p => p.division == dv).sort((a,b) => parseToPar(a.toPar)-parseToPar(b.toPar));
+                
+                if (players.length === 0) return;
+
                 let h = `<h3>Division ${dv}</h3><div class="table-wrapper"><table><thead><tr>
                     <th class="col-pos">POS</th>
                     <th class="col-player">Player</th>
@@ -225,9 +235,11 @@
                 document.getElementById('div-tables').innerHTML += h + ((maxP.v > 0 || maxS.v > 0 || aces.length > 0 || albys.length > 0) ? hBar : '<div style="margin-bottom:10px;"></div>');
             });
 
-            // Standings with TIED logic (Total first, then ACC)
             const arch = d.season||{};
-            [1,2,3].forEach(dv => {
+            activeDivs.forEach(dv => {
+                let filteredPlayers = d.players.filter(p => p.division == dv);
+                if (filteredPlayers.length === 0) return;
+
                 let h = `<div class="st-card"><h4>DIVISION ${dv}</h4><div class="table-wrapper"><table><thead><tr>
                     <th class="col-pos">POS</th>
                     <th class="col-player">Player</th>
@@ -236,7 +248,7 @@
                     <th class="col-data">ACC</th>
                     <th class="col-pts">TOTAL</th>
                 </tr></thead><tbody>`;
-                let sp = d.players.filter(p => p.division == dv).map(p => ({
+                let sp = filteredPlayers.map(p => ({
                     name:p.name, 
                     console:p.console, 
                     total:arch[p.name]?.points||0, 
@@ -244,8 +256,8 @@
                     wins:arch[p.name]?.wins||0, 
                     acc:arch[p.name]?.acc||'--'
                 })).sort((a,b) => {
-                    if (b.total !== a.total) return b.total - a.total; // Sort by points descending
-                    return parseToPar(a.acc) - parseToPar(b.acc);     // Tie-breaker: Lower ACC score ascending
+                    if (b.total !== a.total) return b.total - a.total; 
+                    return parseToPar(a.acc) - parseToPar(b.acc);     
                 });
                 
                 sp.forEach((p, i) => {
@@ -261,8 +273,8 @@
                 document.getElementById('standings-area').innerHTML += h + "</tbody></table></div></div>";
             });
 
-            // History
             if(d.historyHtml) {
+                document.getElementById('history-area').innerHTML = '';
                 const tempDiv = document.createElement('div'); tempDiv.innerHTML = d.historyHtml;
                 tempDiv.querySelectorAll('.history-item').forEach(item => {
                     const title = item.querySelector('strong').innerText.replace(/S(\d+)\sW(\d+):/g, "S$1 W$2 •");
@@ -284,7 +296,9 @@
     }
 
     function calculate(p, idx, isM, isDB) {
-        let base = {0:100, 1:90, 2:80, 3:70, 4:60, 5:50}[idx] || 0;
+        let base = 100 - (idx * 10);
+        if (base < 10) base = 10;
+        
         let bM = isDB ? 2 : 1; let bonus = 0;
         if(parseInt(p.putt) > 0) bonus += (25*bM); if(parseInt(p.shot) > 0) bonus += (25*bM);
         if(p.ace && p.ace.trim() !== "") bonus += (50*bM); if(p.alby && p.alby.trim() !== "") bonus += (50*bM);
