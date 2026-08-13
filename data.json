@@ -9,7 +9,7 @@
     {
       "name": "Keep_of_Kalessin",
       "console": "PS",
-      "division": 1,
+      "division": 2,
       "toPar": "-12",
       "putt": "",
       "shot": "",
@@ -29,7 +29,7 @@
     {
       "name": "Polekatt",
       "console": "PC",
-      "division": 1,
+      "division": 4,
       "toPar": "+11",
       "putt": "",
       "shot": "",
@@ -39,7 +39,7 @@
     {
       "name": "X3offtheTee",
       "console": "Xbox",
-      "division": 1,
+      "division": 3,
       "toPar": "-4",
       "putt": "",
       "shot": "",
@@ -49,7 +49,7 @@
     {
       "name": "ArfaBubble",
       "console": "PS",
-      "division": 1,
+      "division": 2,
       "toPar": "-7",
       "putt": "",
       "shot": "",
@@ -89,7 +89,7 @@
     {
       "name": "guillaume_moreau",
       "console": "PC",
-      "division": 1,
+      "division": 2,
       "toPar": "-14",
       "putt": "",
       "shot": "",
@@ -99,7 +99,7 @@
     {
       "name": "infamousEddieC",
       "console": "PC",
-      "division": 1,
+      "division": 2,
       "toPar": "-9",
       "putt": "",
       "shot": "",
@@ -109,7 +109,7 @@
     {
       "name": "alegiuvadoita",
       "console": "PC",
-      "division": 1,
+      "division": 2,
       "toPar": "-5",
       "putt": "",
       "shot": "",
@@ -119,7 +119,7 @@
     {
       "name": "er114ic",
       "console": "PC",
-      "division": 1,
+      "division": 3,
       "toPar": "-2",
       "putt": "",
       "shot": "",
@@ -129,7 +129,7 @@
     {
       "name": "PillowPutter",
       "console": "Xbox",
-      "division": 1,
+      "division": 3,
       "toPar": "+1",
       "putt": "",
       "shot": "",
@@ -139,7 +139,7 @@
     {
       "name": "RSHxElites",
       "console": "Xbox",
-      "division": 1,
+      "division": 3,
       "toPar": "+4",
       "putt": "",
       "shot": "",
@@ -149,7 +149,7 @@
     {
       "name": "MADROK87",
       "console": "PS",
-      "division": 1,
+      "division": 3,
       "toPar": "+10",
       "putt": "",
       "shot": "",
@@ -159,7 +159,7 @@
     {
       "name": "BeaverThievr",
       "console": "Xbox",
-      "division": 1,
+      "division": 4,
       "toPar": "+10",
       "putt": "",
       "shot": "",
@@ -169,8 +169,58 @@
     {
       "name": "FLEWFLANDER",
       "console": "PS",
-      "division": 1,
+      "division": 4,
       "toPar": "+13",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "GbWaCkErGuY",
+      "console": "Xbox",
+      "division": 1,
+      "toPar": "-18",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Hoplinkz",
+      "console": "PS",
+      "division": 2,
+      "toPar": "-5",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Noworries37908",
+      "console": "Xbox",
+      "division": 3,
+      "toPar": "+3",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "kcarlin069",
+      "console": "PS",
+      "division": 4,
+      "toPar": "+13",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Geordieboy85",
+      "console": "PS",
+      "division": 1,
+      "toPar": "-14",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -180,5 +230,5 @@
   "season": {},
   "historyHtml": "",
   "lastFinalizedWeek": 0,
-  "maxDivisions": 1
+  "maxDivisions": 4
 }
