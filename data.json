@@ -7,56 +7,6 @@
   "doubleBonus": false,
   "players": [
     {
-      "name": "Keep_of_Kalessin",
-      "console": "PS",
-      "division": 2,
-      "toPar": "-12",
-      "putt": "",
-      "shot": "",
-      "ace": "",
-      "alby": ""
-    },
-    {
-      "name": "Mr Longpole",
-      "console": "Xbox",
-      "division": 1,
-      "toPar": "-15",
-      "putt": "",
-      "shot": "",
-      "ace": "",
-      "alby": ""
-    },
-    {
-      "name": "Polekatt",
-      "console": "PC",
-      "division": 4,
-      "toPar": "+11",
-      "putt": "",
-      "shot": "",
-      "ace": "",
-      "alby": ""
-    },
-    {
-      "name": "X3offtheTee",
-      "console": "Xbox",
-      "division": 3,
-      "toPar": "-4",
-      "putt": "",
-      "shot": "",
-      "ace": "",
-      "alby": ""
-    },
-    {
-      "name": "ArfaBubble",
-      "console": "PS",
-      "division": 2,
-      "toPar": "-7",
-      "putt": "",
-      "shot": "",
-      "ace": "",
-      "alby": ""
-    },
-    {
       "name": "WingIsBack",
       "console": "PS",
       "division": 1,
@@ -77,10 +27,40 @@
       "alby": ""
     },
     {
+      "name": "GbWaCkErGuY",
+      "console": "Xbox",
+      "division": 1,
+      "toPar": "-18",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
       "name": "fransslabak",
       "console": "PS",
       "division": 1,
       "toPar": "-17",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Mr Longpole",
+      "console": "Xbox",
+      "division": 1,
+      "toPar": "-15",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Geordieboy85",
+      "console": "PS",
+      "division": 1,
+      "toPar": "-14",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -97,10 +77,30 @@
       "alby": ""
     },
     {
+      "name": "Keep_of_Kalessin",
+      "console": "PS",
+      "division": 2,
+      "toPar": "-12",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
       "name": "infamousEddieC",
-      "console": "PC",
+      "console": "PS",
       "division": 2,
       "toPar": "-9",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "ArfaBubble",
+      "console": "PS",
+      "division": 2,
+      "toPar": "-7",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -117,8 +117,28 @@
       "alby": ""
     },
     {
+      "name": "Hoplinkz",
+      "console": "PS",
+      "division": 2,
+      "toPar": "-5",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "X3offtheTee",
+      "console": "Xbox",
+      "division": 3,
+      "toPar": "-4",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
       "name": "er114ic",
-      "console": "PC",
+      "console": "PS",
       "division": 3,
       "toPar": "-2",
       "putt": "",
@@ -131,6 +151,16 @@
       "console": "Xbox",
       "division": 3,
       "toPar": "+1",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
+      "name": "Noworries37908",
+      "console": "Xbox",
+      "division": 3,
+      "toPar": "+3",
       "putt": "",
       "shot": "",
       "ace": "",
@@ -167,6 +197,16 @@
       "alby": ""
     },
     {
+      "name": "Polekatt",
+      "console": "PS",
+      "division": 4,
+      "toPar": "+11",
+      "putt": "",
+      "shot": "",
+      "ace": "",
+      "alby": ""
+    },
+    {
       "name": "FLEWFLANDER",
       "console": "PS",
       "division": 4,
@@ -177,50 +217,10 @@
       "alby": ""
     },
     {
-      "name": "GbWaCkErGuY",
-      "console": "Xbox",
-      "division": 1,
-      "toPar": "-18",
-      "putt": "",
-      "shot": "",
-      "ace": "",
-      "alby": ""
-    },
-    {
-      "name": "Hoplinkz",
-      "console": "PS",
-      "division": 2,
-      "toPar": "-5",
-      "putt": "",
-      "shot": "",
-      "ace": "",
-      "alby": ""
-    },
-    {
-      "name": "Noworries37908",
-      "console": "Xbox",
-      "division": 3,
-      "toPar": "+3",
-      "putt": "",
-      "shot": "",
-      "ace": "",
-      "alby": ""
-    },
-    {
       "name": "kcarlin069",
       "console": "PS",
       "division": 4,
       "toPar": "+13",
-      "putt": "",
-      "shot": "",
-      "ace": "",
-      "alby": ""
-    },
-    {
-      "name": "Geordieboy85",
-      "console": "PS",
-      "division": 1,
-      "toPar": "-14",
       "putt": "",
       "shot": "",
       "ace": "",
