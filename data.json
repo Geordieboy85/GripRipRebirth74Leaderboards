@@ -269,11 +269,11 @@
   ],
   "season": {
     "WingIsBack": {
-      "points": 0,
-      "eventsPlayed": 0,
-      "wins": 0,
-      "acc": "E",
-      "winStreak": 0
+      "points": 125,
+      "eventsPlayed": 1,
+      "wins": 1,
+      "acc": -13,
+      "winStreak": 1
     },
     "lanzarlaluna": {
       "points": 0,
@@ -290,108 +290,108 @@
       "winStreak": 0
     },
     "fransslabak": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 90,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": -11,
       "winStreak": 0
     },
     "Mr Longpole": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 70,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": -4,
       "winStreak": 0
     },
     "Geordieboy85": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 105,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": -7,
       "winStreak": 0
     },
     "guillaume_moreau": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 50,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": -4,
       "winStreak": 0
     },
     "Keep_of_Kalessin": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 90,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": -12,
       "winStreak": 0
     },
     "infamousEddieC": {
-      "points": 0,
-      "eventsPlayed": 0,
-      "wins": 0,
-      "acc": "E",
-      "winStreak": 0
+      "points": 100,
+      "eventsPlayed": 1,
+      "wins": 1,
+      "acc": -13,
+      "winStreak": 1
     },
     "ArfaBubble": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 80,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": -10,
       "winStreak": 0
     },
     "alegiuvadoita": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 60,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": -5,
       "winStreak": 0
     },
     "Hoplinkz": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 120,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": -6,
       "winStreak": 0
     },
     "X3offtheTee": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 90,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": "+2",
       "winStreak": 0
     },
     "er114ic": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 60,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": "+15",
       "winStreak": 0
     },
     "PillowPutter": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 95,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": "+14",
       "winStreak": 0
     },
     "Noworries37908": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 80,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": "+8",
       "winStreak": 0
     },
     "RSHxElites": {
-      "points": 0,
-      "eventsPlayed": 0,
-      "wins": 0,
-      "acc": "E",
-      "winStreak": 0
+      "points": 125,
+      "eventsPlayed": 1,
+      "wins": 1,
+      "acc": -7,
+      "winStreak": 1
     },
     "MADROK87": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 50,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": "+44",
       "winStreak": 0
     },
     "BeaverThievr": {
@@ -402,30 +402,63 @@
       "winStreak": 0
     },
     "Polekatt": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 75,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": "+23",
       "winStreak": 0
     },
     "FLEWFLANDER": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 60,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": "+11",
       "winStreak": 0
     },
     "kcarlin069": {
-      "points": 0,
-      "eventsPlayed": 0,
+      "points": 40,
+      "eventsPlayed": 1,
       "wins": 0,
-      "acc": "E",
+      "acc": "+37",
+      "winStreak": 0
+    },
+    "Wo Be Killin": {
+      "points": 100,
+      "eventsPlayed": 1,
+      "wins": 1,
+      "acc": -23,
+      "winStreak": 1
+    },
+    "horusphoenix": {
+      "points": 90,
+      "eventsPlayed": 1,
+      "wins": 0,
+      "acc": -15,
+      "winStreak": 0
+    },
+    "leowalkerr8": {
+      "points": 80,
+      "eventsPlayed": 1,
+      "wins": 0,
+      "acc": -10,
+      "winStreak": 0
+    },
+    "XxTML67xX": {
+      "points": 145,
+      "eventsPlayed": 1,
+      "wins": 0,
+      "acc": -8,
       "winStreak": 0
     }
   },
-  "historyHtml": "",
-  "lastFinalizedWeek": 0,
+  "historyHtml": "<div class=\"history-item\"><strong>S8 W1: Baskerville Moors (13 Aug - 19 Aug 2026)</strong><table><tr><th colspan=\"3\">Division 1</th></tr><tr><td>WingIsBack</td><td>-13</td><td>125</td></tr><tr><td>fransslabak</td><td>-11</td><td>90</td></tr><tr><td>Geordieboy85</td><td>-7</td><td>105</td></tr><tr><td>Mr Longpole</td><td>-4</td><td>70</td></tr><tr><th colspan=\"3\">Division 2</th></tr><tr><td>infamousEddieC</td><td>-13</td><td>100</td></tr><tr><td>Keep_of_Kalessin</td><td>-12</td><td>90</td></tr><tr><td>ArfaBubble</td><td>-10</td><td>80</td></tr><tr><td>Hoplinkz</td><td>-6</td><td>120</td></tr><tr><td>alegiuvadoita</td><td>-5</td><td>60</td></tr><tr><td>guillaume_moreau</td><td>-4</td><td>50</td></tr><tr><th colspan=\"3\">Division 3</th></tr><tr><td>RSHxElites</td><td>-7</td><td>125</td></tr><tr><td>X3offtheTee</td><td>+2</td><td>90</td></tr><tr><td>Noworries37908</td><td>+8</td><td>80</td></tr><tr><td>PillowPutter</td><td>+14</td><td>95</td></tr><tr><td>er114ic</td><td>+15</td><td>60</td></tr><tr><td>MADROK87</td><td>+44</td><td>50</td></tr><tr><th colspan=\"3\">Division 4</th></tr><tr><td>Wo Be Killin</td><td>-23</td><td>100</td></tr><tr><td>horusphoenix</td><td>-15</td><td>90</td></tr><tr><td>leowalkerr8</td><td>-10</td><td>80</td></tr><tr><td>XxTML67xX</td><td>-8</td><td>145</td></tr><tr><td>FLEWFLANDER</td><td>+11</td><td>60</td></tr><tr><td>Polekatt</td><td>+23</td><td>75</td></tr><tr><td>kcarlin069</td><td>+37</td><td>40</td></tr></table></div>",
+  "lastFinalizedWeek": 1,
   "maxDivisions": 4,
   "promotionsProcessedForWeek": 0,
-  "weeklyWinners": {}
+  "weeklyWinners": {
+    "1": "WingIsBack",
+    "2": "infamousEddieC",
+    "3": "RSHxElites",
+    "4": "Wo Be Killin"
+  }
 }
